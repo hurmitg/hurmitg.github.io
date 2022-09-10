@@ -1,1 +1,0 @@
-# hurmitg.github.io
