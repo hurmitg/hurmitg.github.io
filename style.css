@@ -228,13 +228,14 @@ section .title::after {
 }
 .about-content{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
   padding-right: 5%;
 }
 .about .about-content .left {
   width: 25%;
   height: 70vh;
-  border: 10x solid blue;
 }
 .about .about-content .left img {
   height: 100%;
@@ -368,7 +369,7 @@ section .title::after {
 /* ------------------- skills section styling --------------------*/
 
 .skills .title::after {
-  content: "what i know";
+  content: "what i have";
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -635,17 +636,18 @@ footer span a:hover {
 }
 
 /* responsive media query start */
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
+@media (max-width: 1270px) {
+  .about .about-content .left{
+    width: 30%;
   }
 }
 
 @media (max-width: 991px) {
-  .max-width {
+  /* .max-width {
     padding: 0 50px;
-  }
+  } */
+
+
 }
 @media (max-width: 947px) {
   .menu-btn {
@@ -690,19 +692,27 @@ footer span a:hover {
   .max-width {
     max-width: 930px;
   }
+  .about .about-content {
+    flex-direction: column;
+  }
   .about .about-content .column {
     width: 100%;
   }
+
   .about .about-content .left {
     display: flex;
     justify-content: center;
-    margin: 0 auto 60px;
+    padding: 0 7%;
   }
   .about .about-content .right {
     flex: 100%;
+    padding: 10%;
+  }
+  .projects .serv-content{
+    grid-template-columns: repeat(2, 1fr);
   }
   .projects .serv-content .card {
-    width: calc(50% - 10px);
+    /* width: calc(50% - 10px); */
     margin-bottom: 20px;
   }
   .skills .skills-content .column,
@@ -725,8 +735,8 @@ footer span a:hover {
   .home .home-content a {
     font-size: 20px;
   }
-  .projects .serv-content .card {
-    width: 110%;
+  .projects .serv-content{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -758,6 +768,13 @@ footer span a:hover {
     width: 35px;
     font-size: 23px;
     line-height: 38px;
+  }
+
+  .contact .contact-content .row .info {
+    margin-left: 0;
+  }
+  .contact .contact-content .row i {
+    display: none;
   }
   /* Fgrid */
 }
