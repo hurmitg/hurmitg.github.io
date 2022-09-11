@@ -251,7 +251,7 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.about .about-content .right .text span {
+.about .about-content .right .text span:nth-child(2) {
   color: #2253c8;
 }
 .about .about-content .right p {
@@ -547,6 +547,10 @@ section .title::after {
   font-size: 25px;
   color: #2253c8;
 }
+.contact .contact-content .row b {
+  text-decoration: underline;
+  font-weight: 500;
+}
 .contact .contact-content .info .head {
   font-weight: 500;
 }
@@ -705,9 +709,12 @@ footer span a:hover {
     justify-content: center;
     padding: 0;
   }
+  .about .about-content .left img {
+    border-radius: 0px;
+  }
   .about .about-content .right {
     flex: 100%;
-    padding: 10%;
+    padding: 5%;
   }
   .projects .serv-content{
     grid-template-columns: repeat(2, 1fr);
@@ -740,8 +747,25 @@ footer span a:hover {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 580px) {
 
+  .about .about-content .right .text span:nth-child(1){
+    display: block;
+  }
+  .about .about-content .right {
+    padding: 5%;
+  }
+ 
+}
 @media (max-width: 500px) {
+  
+  .about .about-content .right .text span:nth-child(1){
+    display: block;
+  }
+  .about .about-content .right {
+    padding: 5%;
+  }
+ 
   .home .home-content .text-2 {
     font-size: 50px;
   }
