@@ -7,6 +7,13 @@ $(document).ready(function () {
       $(".navbar").removeClass("sticky");
     }
 
+    // change name in navbar
+    if (this.scrollY > 1000) {
+      document.querySelector(".logo a").innerHTML = "Hur<span>mit</span>"
+    } else {
+      document.querySelector(".logo a").innerHTML = "Portfo<span>lio</span>"
+    }
+
     // scroll-up button show/hide script
     if (this.scrollY > 500) {
       $(".scroll-up-btn").addClass("show");
