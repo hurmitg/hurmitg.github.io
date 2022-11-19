@@ -874,6 +874,17 @@ footer span a:hover {
     width: 100%;
     margin-bottom: 35px;
   }
+
+  .github {
+    display: none;
+  }
+
+  .github .calendar {
+    width: none;
+    display: none;
+    padding-top: 30px;
+    border: none;
+  }
 }
 
 @media (max-width: 690px) {
@@ -896,6 +907,7 @@ footer span a:hover {
   .projects .serv-content {
     grid-template-columns: repeat(1, 1fr);
   }
+
 }
 
 @media (max-width: 580px) {
@@ -907,6 +919,7 @@ footer span a:hover {
   .about .about-content .right {
     padding: 5%;
   }
+
 
 }
 
@@ -969,6 +982,10 @@ footer span a:hover {
 
   .sourceCodeBtn .liveBtn {
     margin: 0 5px;
+  }
+
+  .github {
+    display: none;
   }
 
   /* Fgrid */
